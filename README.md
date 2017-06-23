@@ -26,5 +26,9 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
 + 在vue的学习中，重新写几个组件，以自己的方式先功能实现，在代码优化，不断的更新。
     - 分页组件
     - 轮播组件
++ 技术从实现，到调优，一步步的前进，不力求一步到位，要摸清技术yanjin
+
+##### 技术框架
+
 ##### 目标
 + 自己在工作与学习环境中，不间断的，更新与维护，一点一滴做起
