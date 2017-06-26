@@ -1,6 +1,8 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
+  <div id="app" >
+  <div class="bar bar-header bar-positive">
+    <h1 class="title">分类</h1>
+  </div>
     <router-view></router-view>
   </div>
 </template>
@@ -12,7 +14,7 @@ export default {
 </script>
 
 <style>
-#app {
+app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Hello from '@/components/Hello'
 import List from '@/page/list'
+import Topic from '@/page/topic'
 
 Vue.use(Router)
 
@@ -12,11 +13,14 @@ export default new Router({
       path: '/',
       name: 'Hello',
       component: Hello
-    },
-    {
+    }, {
       path: '/list',
       name: 'List',
       component: List
+    }, {
+      path: '/topic',
+      name: 'Topic',
+      component: Topic
     }
   ]
 })
