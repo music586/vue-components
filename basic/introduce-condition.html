@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="root">
+    <template v-if="loginType === 'username'">
+        <label>Username</label>
+        <input placeholder="Enter your username" key="username-input">
+    </template>
+    <template v-else>
+        <label>Email</label>
+        <input placeholder="Enter your email address" key="address-input">
+    </template>
+    <button @click="change">change type</button>
+    </div>
+</body>
+<script type="text/javascript">
+    var vm = new Vue({
+        el: '#root',
+        data: {
+            loginType : 'username'
+        },
+        methods: {
+            change: function () {
+                this.loginType = this.loginType === 'username' ? '' : 'username'
+            }   
+        }
+        
+    });
+</script>
+</html>

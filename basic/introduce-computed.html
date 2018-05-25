@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="example">
+        <p>初始message是："{{ message }}"</p>
+        <p>计算后的翻转message是：“{{ reversendMessage}}”</p>
+        <button @click="openStatus&&open()">打开</button>
+    </div>
+</body>
+<script type="text/javascript">
+    var vm = new Vue({
+        el: '#example',
+        data: {
+            message: 'Hello Vue!',
+            openStatus: true
+        },
+        methods: {
+            open: function () {
+                var self = this;
+                this.openStatus = false;
+                console.log('open');
+             setTimeout(function () {
+                window.open('./index.html');
+               
+             }, 1000)  
+             self.openStatus = true;
+            }
+        },
+        computed: {
+            reversendMessage: function () {
+                return this.message.split('').reverse().join('');
+            }
+        }
+    })
+
+</script>
+</html>
